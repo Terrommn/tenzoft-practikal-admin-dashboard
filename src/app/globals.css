@@ -6,10 +6,89 @@
 }
 
 @theme inline {
+  /* Custom Colors */
+  --color-dark-aqua: #001E21;
+  --color-aqua: #024D55;
+  --color-light-aqua: #1BB4AD;
+  --color-white: #ECEFF4;
+  --color-orange: #FF8539;
+
+  /* Primary Color Scale */
+  --color-primary-50: #f0fdfc;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #024D55;
+  --color-primary-600: #0f766e;
+  --color-primary-700: #0d5b56;
+  --color-primary-800: #134e4a;
+  --color-primary-900: #042f2e;
+
+  /* Secondary Color Scale */
+  --color-secondary-50: #f0fdfc;
+  --color-secondary-100: #ccfbf1;
+  --color-secondary-200: #99f6e4;
+  --color-secondary-300: #5eead4;
+  --color-secondary-400: #2dd4bf;
+  --color-secondary-500: #1BB4AD;
+  --color-secondary-600: #0d9488;
+  --color-secondary-700: #0f766e;
+  --color-secondary-800: #115e59;
+  --color-secondary-900: #134e4a;
+
+  /* Accent Color Scale */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
+  --color-accent-200: #fed7aa;
+  --color-accent-300: #fdba74;
+  --color-accent-400: #fb923c;
+  --color-accent-500: #FF8539;
+  --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
+  --color-accent-800: #9a3412;
+  --color-accent-900: #7c2d12;
+
+  /* Font Families */
+  --font-sans: var(--font-funnel-sans), 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif';
+  --font-display: var(--font-funnel-sans), 'Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif';
+  --font-mono: 'JetBrains Mono', 'ui-monospace', 'monospace';
+
+  /* Existing theme colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Backdrop Blur */
+  --backdrop-blur-xs: 2px;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-in-out;
+  --animate-slide-up: slide-up 0.8s ease-out;
+  --animate-slide-in-left: slide-in-left 0.8s ease-out;
+  --animate-slide-in-right: slide-in-right 0.8s ease-out;
+  --animate-bounce-slow: bounce 2s infinite;
+  --animate-pulse-slow: pulse 3s infinite;
+}
+
+/* Keyframes for custom animations */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(-30px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(30px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 
 @media (prefers-color-scheme: dark) {
